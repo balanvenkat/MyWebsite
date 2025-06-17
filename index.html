@@ -3,28 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My first and best Website</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Balan Venkatachalam - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Layout Styles */
+    .container {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      height: 100%;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .sidebar ul li::before {
+      content: "•";
+      color: #ff9800;
+      margin-right: 8px;
+    }
+
+    .content {
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content section {
+      margin-bottom: 30px;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0073e6;
+    }
+
+    .content p, .content ul {
+      font-size: 1.1rem;
+    }
+
+    .content ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+
+    .content ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Awards and Blogs Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #0073e6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to first personal Website</h1>
-    <nav>
+
+<header style="background: #0073e6; color: #fff; text-align: center; padding: 30px;">
+  <h1>Balan Venkatachalam</h1>
+  <p>Senior Director - HealthCare & Life Sciences</p>
+</header>
+
+<div class="container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Skills</h2>
+    <ul>
+      <li>Delivery & Operations</li>
+      <li>Process Re-engineering</li>
+      <li>Budget & P/L Management</li>
+      <li>Cross-functional Leadership</li>
+      <li>Healthcare Data Integration</li>
+      <li>Azure Services</li>
+      <li>Legacy App Modernization</li>
+    </ul>
+
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Data Science Exploration</li>
+      <li>Reading Business Analytics Books</li>
+      <li>Mentoring Teams</li>
+      <li>Traveling</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a seasoned technology leader with over 20 years of experience in healthcare IT. My expertise lies in optimizing IT operations, leading large-scale modernization programs, and delivering results in high-stakes environments. I’ve managed $18M+ annual revenue initiatives, driving innovations such as EDI modernization, EDW re-platforming, and cloud migration.
+      </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2>Experience</h2>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="balan.html">About</a></li>
+        <li><strong>Senior Director - NTT DATA (2022 - Present)</strong>: Managed IT operations for a blues plan with $18M+ revenue and enhanced agile maturity.</li>
+        <li><strong>Director - NTT DATA (2018 - 2021)</strong>: Delivered a $25M transformation across health plans, improving SLA adherence from 68% to 92%.</li>
+        <li><strong>Technical Program Manager - NTT DATA (2014 - 2017)</strong>: Streamlined operations for enterprise pharmacy solutions, improving time-to-market efficiency.</li>
       </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Hello, Universe!</h2>
-      <p>This is the homepage of my website hosted on Cloudflare Pages.</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Master of Science, Business Analytics</strong> - Florida International University (2021 - 2022)</li>
+        <li><strong>Bachelor of Science, Information Technology</strong> - Bharathiar University (1999 - 2003)</li>
+      </ul>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+      <h2>Awards & Recognition</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>First Place</h3>
+          <p>Data Science Hackathon (Lufthansa Systems)</p>
+        </div>
+        <div class="card">
+          <h3>First Place</h3>
+          <p>Dell Cybersecurity Challenge @ FIU</p>
+        </div>
+        <div class="card">
+          <h3>AWS Certification</h3>
+          <p>Cloud Practitioner (2020)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section id="blogs">
+      <h2>Blogs</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>How to Optimize IT Operations</h3>
+          <p>A step-by-step guide to enhancing IT efficiency in healthcare organizations.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud Migration Strategies</h3>
+          <p>Key lessons learned from modernizing legacy applications.</p>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    <p>&copy; 2025 My OG Website. All rights reserved.</p>
-  </footer>
+</div>
+
+<footer>
+  <p>&copy; 2025 Balan Venkatachalam. All Rights Reserved. | <a href="mailto:balan.venkatachalam@gmail.com">Contact Me</a></p>
+</footer>
+
 </body>
 </html>
