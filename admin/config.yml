@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: balanvenkat/MyWebsite # Replace with your GitHub username and repository name
+  branch: main # Replace with your default branch name (usually "main" or "master")
+
+media_folder: "static/images/uploads" # Where uploaded images will be stored in your repo
+public_folder: "/images/uploads" # Public URL for uploaded images
+
+collections:
+  - name: "blog" # Unique identifier for this collection
+    label: "Blog" # Label in the CMS
+    folder: "content/posts" # Folder where blog posts will be stored
+    create: true # Allow users to create new posts
+    slug: "{{slug}}" # Automatically generate filenames based on the title
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
