@@ -3,7 +3,7 @@ backend:
   repo: balanvenkat/MyWebsite # Replace with your GitHub username and repository name
   branch: main # Replace with your default branch name (usually "main" or "master")
   base_url: https://www.balanv.com # Replace with your website’s URL
-
+  auth_scope: repo
 media_folder: "static/images/uploads" # Where uploaded images will be stored in your repo
 public_folder: "/images/uploads" # Public URL for uploaded images
 
